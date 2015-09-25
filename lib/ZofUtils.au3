@@ -8,8 +8,7 @@ Library description: useful utility functions
 
 #ce ---------------------------------------------------------------------------
 
-; #include <Array.au3>;
-
+#include-once
 #include <MsgBoxConstants.au3>
 
 Opt('MustDeclareVars', 1);
