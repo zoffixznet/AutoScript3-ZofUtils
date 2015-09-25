@@ -18,6 +18,11 @@ Func Alert($text)
     MsgBox($MB_OK, "", $text);
 EndFunc
 
+Func Die($text = '')
+    If StringLen($text) Then Alert($text);
+    Exit;
+EndFunc
+
 #cs ---------------------------------------------------------------------------
 
 StringRegExpG( $text, $pattern [, $flag = 0 [, $offset = 1]] );
