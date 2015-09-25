@@ -25,6 +25,17 @@ Exits the program. If optional text is provided, display a message box first.
 Third argument specifies after how many seconds to auto-close the message
 box (**NOTE**: `0` means **no** timeout!!)
 
+## post
+
+```au3
+    Local $res = post('http://httpbin.org/post', 'foo=bar&bez=ber');
+    If $res[1] <> 200 Then die('Failed! Response code: ' & $res[1])
+    alert('Response is: ' & $res[0]);
+```
+
+Performs HTTP POST using `application/x-www-form-urlencoded` encoding method.
+Takes URL to post to and urlencoded string of parameters. Returns an array
+of two elements: response and response code.
 
 # Shortcut Functions
 

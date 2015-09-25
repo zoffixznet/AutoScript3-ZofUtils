@@ -48,6 +48,15 @@ Func title_mode($mode)
     Return Opt("WinTitleMatchMode", $mode);
 EndFunc
 
+Func post($url, $data)
+    Local $req = ObjCreate('winhttp.winhttprequest.5.1');
+    $req.Open('POST', $url, False);
+    $req.SetRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    $req.Send($data);
+    Local $res[] = [ $req.ResponseText, $req.Status ];
+    Return $res;
+EndFunc
+
 #cs ---------------------------------------------------------------------------
 
 StringRegExpG( $text, $pattern [, $flag = 0 [, $offset = 1]] );
