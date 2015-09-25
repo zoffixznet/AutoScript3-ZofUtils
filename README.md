@@ -5,20 +5,20 @@ A collection of utility functions for AutoIt v3 language
 
 # Provided Functions
 
-## Alert
+## alert
 
 ```au3
-    Alert('some text to display');
+    alert('some text to display');
 ```
 
 Displays a message box with text.
 
-## Die
+## die
 
 ```au3
-    Die();
-    Die('some error to display');
-    Die('some error to display and close the message box after 10secs', 10);
+    die();
+    die('some error to display');
+    die('some error to display and close the message box after 10secs', 10);
 ```
 
 Exits the program. If optional text is provided, display a message box first.

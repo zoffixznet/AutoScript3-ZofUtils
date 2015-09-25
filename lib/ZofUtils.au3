@@ -13,11 +13,11 @@ Library description: useful utility functions
 
 Opt('MustDeclareVars', 1);
 
-Func Alert($text)
+Func alert($text)
     MsgBox($MB_OK, "", $text);
 EndFunc
 
-Func Die($text = '', $timeout = 0)
+Func die($text = '', $timeout = 0)
     If StringLen($text) Then MsgBox($MB_OK, "", $text, $timeout);
     Exit(1);
 EndFunc
