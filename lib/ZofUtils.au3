@@ -8,16 +8,15 @@ Library description: useful utility functions
 
 #ce ---------------------------------------------------------------------------
 
-#include <Array.au3>;
+; #include <Array.au3>;
 Opt('MustDeclareVars', 1);
 
 #cs ---------------------------------------------------------------------------
 
-StringRegExpG( $text, $pattern [$flag = 0], [$offset = 1] );
+StringRegExpG( $text, $pattern [, $flag = 0 [, $offset = 1]] );
 
 Return all matches of $pattern in $text
 
-#ce ---------------------------------------------------------------------------
 
 Func StringRegExpG( $text, $pattern, $flag = 0, $offset = 1)
     Local $total_matches[1];
@@ -42,3 +41,5 @@ Func StringRegExpG( $text, $pattern, $flag = 0, $offset = 1)
     Return $total_matches;
 
 EndFunc
+
+#ce ---------------------------------------------------------------------------
