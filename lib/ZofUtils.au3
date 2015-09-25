@@ -10,6 +10,7 @@ Library description: useful utility functions
 
 #include-once
 #include <MsgBoxConstants.au3>
+#include <FileConstants.au3>
 
 Opt('MustDeclareVars', 1);
 
@@ -55,6 +56,15 @@ Func post($url, $data)
     $req.Send($data);
     Local $res[] = [ $req.ResponseText, $req.Status ];
     Return $res;
+EndFunc
+
+Func spurt($data, $filename)
+    Local $fh _
+    = FileOpen($filename, $FO_OVERWRITE + $FO_UTF8_NOBOM + $FO_CREATEPATH);
+    If $fh == -1 Then Return -1;
+
+    If Not FileWrite($fh, $data) Then Return -1;
+    Return $fh;
 EndFunc
 
 #cs ---------------------------------------------------------------------------

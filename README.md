@@ -33,9 +33,15 @@ box (**NOTE**: `0` means **no** timeout!!)
     alert('Response is: ' & $res[0]);
 ```
 
-Performs HTTP POST using `application/x-www-form-urlencoded` encoding method.
-Takes URL to post to and urlencoded string of parameters. Returns an array
-of two elements: response and response code.
+## spurt
+
+```au3
+    Local $fh = spurt('C:/foo/bar/baz/My content!', 'foo.txt');
+    If $fh == -1 Then die('Error!');
+
+Writes data (first argument) into file (second argument) and returns
+the filehandle. Returns -1 on error. The file and any needed directories
+are created. If the file exists, its contents will be overwritten.
 
 # Shortcut Functions
 
