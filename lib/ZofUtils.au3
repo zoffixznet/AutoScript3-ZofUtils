@@ -13,6 +13,8 @@ Library description: useful utility functions
 
 Opt('MustDeclareVars', 1);
 
+Global $ZOFUTILS_NAP = 1;
+
 Func alert($text)
     MsgBox($MB_OK, "", $text);
 EndFunc
@@ -23,11 +25,11 @@ Func die($text = '', $timeout = 0)
 EndFunc
 
 func nap()
-    sleep(1000)
+    sleep(1000 * $ZOFUTILS_NAP)
 endfunc
 
 func hnap()
-    sleep(500)
+    sleep(500 * $ZOFUTILS_NAP)
 endfunc
 
 Func title_mode_start()
