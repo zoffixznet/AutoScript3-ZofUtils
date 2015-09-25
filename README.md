@@ -24,3 +24,20 @@ Displays a message box with text.
 Exits the program. If optional text is provided, display a message box first.
 Third argument specifies after how many seconds to auto-close the message
 box (**NOTE**: `0` means **no** timeout!!);
+
+
+## nap
+
+```au3
+    nap();
+```
+
+Equivalent to `Sleep(1000)`
+
+## hnap
+
+```au3
+    hnap();
+```
+
+Equivalent to `Sleep(500)`. (mnemonic: "half `nap`")

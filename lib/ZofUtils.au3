@@ -22,6 +22,14 @@ Func Die($text = '', $timeout = 0)
     Exit(1);
 EndFunc
 
+func nap()
+    sleep(1000)
+endfunc
+
+func hnap()
+    sleep(500)
+endfunc
+
 #cs ---------------------------------------------------------------------------
 
 StringRegExpG( $text, $pattern [, $flag = 0 [, $offset = 1]] );
