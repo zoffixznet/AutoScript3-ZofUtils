@@ -9,7 +9,14 @@ Library description: useful utility functions
 #ce ---------------------------------------------------------------------------
 
 ; #include <Array.au3>;
+
+#include <MsgBoxConstants.au3>
+
 Opt('MustDeclareVars', 1);
+
+Func Alert($text)
+    MsgBox($MB_OK, "", $text);
+EndFunc
 
 #cs ---------------------------------------------------------------------------
 
