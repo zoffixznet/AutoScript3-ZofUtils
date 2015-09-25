@@ -26,18 +26,16 @@ Third argument specifies after how many seconds to auto-close the message
 box (**NOTE**: `0` means **no** timeout!!);
 
 
-## nap
+# Shortcut Functions
+
+Functions that are equivalent to specific AutoIt code. `Return` indicates
+that function returns that specific value.
 
 ```au3
-    nap();
+    nap();                  Sleep(1000)
+    hnap();                 Sleep(500);  (mnemonic "half nap")
+    title_mode_start();     Return Opt("WinTitleMatchMode", 1)
+    title_mode_sub();       Return Opt("WinTitleMatchMode", 2)
+    title_mode_exact();     Return Opt("WinTitleMatchMode", 3)
+    title_mode($mode);      Return Opt("WinTitleMatchMode", $mode)
 ```
-
-Equivalent to `Sleep(1000)`
-
-## hnap
-
-```au3
-    hnap();
-```
-
-Equivalent to `Sleep(500)`. (mnemonic: "half `nap`")

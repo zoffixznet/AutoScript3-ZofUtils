@@ -30,6 +30,22 @@ func hnap()
     sleep(500)
 endfunc
 
+Func title_mode_start()
+    Return Opt("WinTitleMatchMode", 1);
+EndFunc
+
+Func title_mode_sub()
+    Return Opt("WinTitleMatchMode", 2);
+EndFunc
+
+Func title_mode_exact()
+    Return Opt("WinTitleMatchMode", 3);
+EndFunc
+
+Func title_mode($mode)
+    Return Opt("WinTitleMatchMode", $mode);
+EndFunc
+
 #cs ---------------------------------------------------------------------------
 
 StringRegExpG( $text, $pattern [, $flag = 0 [, $offset = 1]] );
