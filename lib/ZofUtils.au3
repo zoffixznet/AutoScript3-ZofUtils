@@ -19,7 +19,7 @@ EndFunc
 
 Func Die($text = '')
     If StringLen($text) Then Alert($text);
-    Exit;
+    Exit(1);
 EndFunc
 
 #cs ---------------------------------------------------------------------------
