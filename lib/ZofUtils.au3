@@ -17,8 +17,8 @@ Func Alert($text)
     MsgBox($MB_OK, "", $text);
 EndFunc
 
-Func Die($text = '')
-    If StringLen($text) Then Alert($text);
+Func Die($text = '', $timeout = 0)
+    If StringLen($text) Then MsgBox($MB_OK, "", $text, $timeout);
     Exit(1);
 EndFunc
 
