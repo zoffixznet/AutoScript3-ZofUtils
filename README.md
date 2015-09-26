@@ -38,7 +38,7 @@ box (**NOTE**: `0` means **no** timeout!!)
 ```au3
     Local $fh = spurt('C:/foo/bar/baz/My content!', 'foo.txt');
     If $fh == -1 Then die('Error!');
-
+```
 Writes data (first argument) into file (second argument) and returns
 the filehandle. Returns -1 on error. The file and any needed directories
 are created. If the file exists, its contents will be overwritten.
@@ -48,7 +48,7 @@ are created. If the file exists, its contents will be overwritten.
 Functions that are equivalent to specific AutoIt code. `Return` indicates
 that function returns that specific value.
 
-```$ZOFUTILS_NAP` is a global variable that you can use as a multiplier
+`$ZOFUTILS_NAP` is a global variable that you can use as a multiplier
 for nap functions
 
 ```au3
